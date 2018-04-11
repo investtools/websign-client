@@ -27,8 +27,6 @@
     "jsdom": "11.7.0",
     "jsdom-global": "3.0.2",
     "mocha": "2.3.4",
-    "socket-io-mock": "^1.0.1",
-    "socket.io-mock": "^1.2.3",
     "webpack": "1.12.9"
   },
   "author": "",
@@ -36,8 +34,6 @@
   "dependencies": {
     "event-emitter-es6": "^1.1.5",
     "js-sha256": "^0.9.0",
-    "mock-socket": "^7.1.0",
-    "q": "^1.5.1",
     "socket.io": "^2.1.0",
     "socket.io-client": "^2.1.0"
   }
