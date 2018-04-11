@@ -21,7 +21,6 @@ describe('websign tests', () => {
   }
 
   function closeServer(done) {
-    //encerrando o server
     done()
     server.close(function () {
       console.log('server stopped');
