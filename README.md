@@ -5,7 +5,7 @@ A simple library to use websign in a fluent way
 ## Getting started
 * npm install websign-client
 * import in your html with srcipt tag like: `<script src="/lib/websign.js"></script>`
-* or if you prefere, you can use in ecma6 way: `import WebSign from 'WebSign';`
+* or if you prefer, you can use in ecma6 way: `import WebSign from 'WebSign';`
 
 
 ## Example
@@ -26,6 +26,15 @@ webSign.sign("some text")
 webSign.on('signed-data', data => {
   //do your stuff with data signed
 });
+```
 
+## Run tests
+
+* npm install
+* npm run test
+
+### Emulating a websign executable
+
+* npm run dev
 
 
