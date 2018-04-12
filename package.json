@@ -1,6 +1,6 @@
 {
     "name": "websign-client",
-    "author": "Lucas Pérez <lucascperez@gmail.com>"
+    "author": "Lucas Pérez <lucascperez@gmail.com>",
     "version": "1.0.0",
     "bugs": {
         "url": "https://github.com/investtools/websign-client/issues"
