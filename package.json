@@ -1,40 +1,56 @@
 {
-  "name": "websign-cli",
-  "version": "1.0.0",
-  "description": "",
-  "main": "webbpack.config.js",
-  "directories": {
-    "lib": "lib",
-    "test": "test"
-  },
-  "scripts": {
-    "build": "WEBPACK_ENV=build webpack",
-    "dev": "WEBPACK_ENV=dev webpack --progress --colors --watch",
-    "test": "mocha -r jsdom-global/register --compilers js:babel-core/register --colors -w ./test/*.spec.js"
-  },
-  "devDependencies": {
-    "babel": "6.3.13",
-    "babel-core": "6.1.18",
-    "babel-eslint": "4.1.3",
-    "babel-loader": "6.1.0",
-    "babel-plugin-add-module-exports": "0.1.2",
-    "babel-preset-es2015": "6.3.13",
-    "chai": "^3.4.1",
-    "es6-defer": "^1.0.1",
-    "es6-deferred": "^1.3.0",
-    "eslint": "1.7.2",
-    "eslint-loader": "1.1.0",
-    "jsdom": "11.7.0",
-    "jsdom-global": "3.0.2",
-    "mocha": "2.3.4",
-    "webpack": "1.12.9"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "event-emitter-es6": "^1.1.5",
-    "js-sha256": "^0.9.0",
-    "socket.io": "^2.1.0",
-    "socket.io-client": "^2.1.0"
-  }
+    "author": "Krasimir Tsonev",
+    "bugs": {
+        "url": "https://github.com/krasimir/webpack-library-starter/issues"
+    },
+    "description": "Produce universal library with webpack and es6",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.0",
+        "babel-eslint": "^8.0.3",
+        "babel-loader": "^7.1.2",
+        "babel-plugin-add-module-exports": "^0.2.1",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-stage-2": "^6.24.1",
+        "chai": "^4.1.2",
+        "eslint": "^4.13.1",
+        "eslint-loader": "^1.9.0",
+        "http-server": "^0.11.1",
+        "mocha": "^4.0.1",
+        "webpack": "^3.10.0",
+        "yargs": "^10.0.3"
+    },
+    "homepage": "https://github.com/krasimir/webpack-library-starter",
+    "keywords": [
+        "webpack",
+        "es6",
+        "starter",
+        "library",
+        "universal",
+        "umd",
+        "commonjs"
+    ],
+    "license": "MIT",
+    "main": "lib/library.js",
+    "name": "webpack-library-starter",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/krasimir/webpack-library-starter.git"
+    },
+    "scripts": {
+        "build": "webpack --env dev && webpack --env build",
+        "build-server-dev": "babel src/mockServer.js --out-file lib/mockServer.js && node lib/mockServer.js",
+        "start-server": "live-server --open=/public/usage_example.html",
+        "dev": "npm run-script build-server-dev & npm run-script start-server",
+        "test": "mocha --require babel-core/register --colors ./test/*.spec.js",
+        "test:watch": "mocha --require babel-core/register --colors -w ./test/*.spec.js"
+    },
+    "version": "1.0.2",
+    "dependencies": {
+        "event-emitter-es6": "^1.1.5",
+        "js-sha256": "^0.9.0",
+        "socket.io": "^2.1.0",
+        "socket.io-client": "^2.1.0"
+    }
 }

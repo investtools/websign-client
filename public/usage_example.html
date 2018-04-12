@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../lib/websign.js"></script>
+  </head>
+  <body>
+    <div class="panel">
+      <h1>Procurando WebSign...</h1>
+    </div>
+    <div class="panel" id="not-available" style="display: none;">
+      <h1>WebSign não instalado!</h1>
+      <a href="https://gateway.ipfs.io/ipfs/QmNn94w1skbUFbEZY37NvCy2ioZvQMANRzzK7XtjbefY3H/WebSign%20Setup%201.0.1.exe">Clique aqui para instalar</a>
+    </div>
+    <div class="panel" id="main" style="display: none;">
+      <input id="data" type="text" />
+      <button type="button" id="signBtn">Assinar</button>
+      <div id="signedData">
+      </div>
+    </div>
+    <script>
+      var webSign = new WebSign()
+      
+      webSign.on('service-available', err => {
+        $('.panel').hide()
+        $('#main').show()
+      });
+
+      webSign.on('service-unavailable', err => {
+        $('.panel').hide()
+        $('#not-available').show()
+      });
+
+      $('#signBtn').click(() => {
+        webSign.sign($('#data').val())
+      });
+
+      webSign.on('signed-data', data => {
+       $('#signedData').text(data) 
+      });
+
+    </script>
+  </body>
+</html>
