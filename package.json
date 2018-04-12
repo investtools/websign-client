@@ -1,9 +1,11 @@
 {
-    "author": "Krasimir Tsonev",
+    "name": "websign-client",
+    "author": "Lucas Pérez <lucascperez@gmail.com>"
+    "version": "1.0.0",
     "bugs": {
-        "url": "https://github.com/krasimir/webpack-library-starter/issues"
+        "url": "https://github.com/investtools/websign-client/issues"
     },
-    "description": "Produce universal library with webpack and es6",
+    "description": "WebSign library",
     "devDependencies": {
         "babel-cli": "^6.26.0",
         "babel-core": "^6.26.0",
@@ -21,7 +23,7 @@
         "webpack": "^3.10.0",
         "yargs": "^10.0.3"
     },
-    "homepage": "https://github.com/krasimir/webpack-library-starter",
+    "homepage": "https://github.com/investtools/websign-client",
     "keywords": [
         "webpack",
         "es6",
@@ -32,11 +34,10 @@
         "commonjs"
     ],
     "license": "MIT",
-    "main": "lib/library.js",
-    "name": "webpack-library-starter",
+    "main": "lib/websign.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/krasimir/webpack-library-starter.git"
+        "url": "https://github.com/investtools/websign-client.git"
     },
     "scripts": {
         "build": "webpack --env dev && webpack --env build",
@@ -46,7 +47,6 @@
         "test": "mocha --require babel-core/register --colors ./test/*.spec.js",
         "test:watch": "mocha --require babel-core/register --colors -w ./test/*.spec.js"
     },
-    "version": "1.0.2",
     "dependencies": {
         "event-emitter-es6": "^1.1.5",
         "js-sha256": "^0.9.0",
