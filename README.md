@@ -14,17 +14,17 @@ A simple library to use websign in a fluent way
 var webSign = new WebSign()
       
 webSign.on('service-available', err => {
-  //do your stuffs...
+  //do your stuff...
 });
 
 webSign.on('service-unavailable', err => {
-  //do your stuffs...
+  //do your stuff...
 });
 
 webSign.sign("some text")
 
 webSign.on('signed-data', data => {
-  //do your stuffs with data signed
+  //do your stuff with data signed
 });
 
 
